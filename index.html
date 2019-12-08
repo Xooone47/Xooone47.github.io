@@ -7,5 +7,14 @@
     <link href="/assets/styles.0abfe2ac6108095c35f0.css" rel="stylesheet"></head>
     <body>
         <div id="app"></div>
+    <script>
+        (function(){
+          var redirect = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          if (redirect && redirect != location.href) {
+            history.replaceState(null, null, redirect);
+          }
+        })();
+      </script>
     <script type="text/javascript" src="/assets/index.0abfe2ac6108095c35f0.js"></script></body>
 </html>
